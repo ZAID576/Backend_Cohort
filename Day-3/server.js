@@ -9,8 +9,8 @@ const notes = []
 app.post("/notes",(req,res)=>{
     console.log(req.body)
     res.send("note created")
-}) //API
+}) //API 
   
 app.listen(3000,()=>{
     console.log("Server is running on port 3000")
-})  // server start
+})  // server start 
