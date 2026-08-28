@@ -16,6 +16,9 @@ const notes = []
 //    res.send("Hello World")
 // })
 
+
+
+// POST
 app.post("/notes", (req,res)=>{
   console.log(req.body)
   console.log(notes)
@@ -23,19 +26,23 @@ app.post("/notes", (req,res)=>{
   res.send("notes send")
 })
 
+
+// GET
 app.get("/notes",(req,res)=>{
   res.send(notes)
 })
 
 
+
 // DELETE /notes
 // delete /notes/0
-
 app.delete("/notes/:index",(req,res)=>{
   delete notes[req.params.index]
 
   res.send("note deleted successfully")
 })
+
+
 
 // PATCH /notes/:index
 // req.body = {description :- "sample modified description."}
