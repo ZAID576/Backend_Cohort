@@ -1,0 +1,17 @@
+// server ko create kerna 
+// server ko config kerna
+
+const  express = require("express")
+
+const app = express()
+
+app.use(express.json())
+
+const notes = []
+
+// POST 
+app.post("/notes",(req,res)=>{
+  notes.push(req.body)
+})
+
+module.exports = app
