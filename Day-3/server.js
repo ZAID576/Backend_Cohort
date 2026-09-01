@@ -2,7 +2,11 @@ const express = require("express")
 
 const app = express() // server create
 
+<<<<<<< HEAD
 app.use(express.json()) // Middleware 
+=======
+app.use(express.json()) // Middleware
+>>>>>>> 15f0dfc425127656753c4edacdfe677f58f692fd
 
 const notes = []
 
