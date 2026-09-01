@@ -3,11 +3,11 @@
 // 2nd -  server ko config kerna
 
 
-const express = require("express")
+const express = require("express") // express require
 
-const app = express() // server created
+const app = express() // server start
 
-app.use(express.json())
+app.use(express.json())  // middleware
 
 const notes = []
 
@@ -23,7 +23,9 @@ app.post("/notes", (req,res)=>{
   console.log(req.body)
   console.log(notes)
   notes.push(req.body)
-  res.send("notes send")
+  res.json({
+    message : " notes send "
+  })
 })
 
 
