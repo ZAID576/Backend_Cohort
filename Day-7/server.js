@@ -1,6 +1,7 @@
 // server ko start kerna 
 // server ko database se connect kerna
-
+ 
+require("dotenv").config()
 const app = require("./src/app")
 const mongoose = require("mongoose")
 const connectToDb = require("./src/config/database")
