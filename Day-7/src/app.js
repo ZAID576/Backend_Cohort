@@ -2,7 +2,6 @@
 // server ko config kerna 
 
 const express = require("express")
-// const noteModel = require("./model/notes.noteModel")
 const noteModel = require("./models/notes.model")
 
 const app = express()
