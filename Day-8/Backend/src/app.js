@@ -22,6 +22,7 @@ app.post("/api/notes", async (req,res)=>{
     })
 })
 
+
 // GET 
 app.get("/api/notes",async(req,res)=>{
     const notes = await noteModel.find()
@@ -30,6 +31,7 @@ app.get("/api/notes",async(req,res)=>{
         message : "Note fetch successfully"
     })
 })
+
 
 //DELETE
 app.delete("/api/notes/:id", async(req,res)=>{
@@ -45,7 +47,6 @@ app.delete("/api/notes/:id", async(req,res)=>{
 })
 
 // PATCH
-
 app.patch("/api/notes", async(req,res)=>{
     const id = req.params.id
     const {description} = req.body
