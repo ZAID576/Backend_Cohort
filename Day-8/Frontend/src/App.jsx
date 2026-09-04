@@ -26,19 +26,27 @@ const App = () => {
 
   console.log("Hello Integration")
 
-  useEffect(() => {},[])
+  useEffect(() => {
+    axios.get("http://localhost:3001/api/notes")
+      .then(res => {
+        setNotes(res.data.notes)
+      })
+  }, [])
 
-  axios.get("http://localhost:3001/api/notes") 
-    .then(res => {
-      setNotes(res.data.notes)
-    })
+
 
  return (
   <>
+    <form className="note-create-form" onSubmit={handleSubmit}>
+      <input name="title" type="text" placeholder="Title" />
+      <input name="description" type="text" placeholder="Description" />
+      <button>Create Note</button>
+    </form>
+
     <div className="card">
         {
         notes.map(note => {
-          return <div className="note">
+          return <div className="note" key={note.title}>
             <h1>{note.title}</h1>
             <p>{note.description}</p>
           </div>
@@ -50,6 +58,4 @@ const App = () => {
 }
 
 export default App
-
-
 
