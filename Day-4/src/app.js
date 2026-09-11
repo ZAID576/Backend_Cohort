@@ -5,7 +5,7 @@
 
 const express = require("express") // express require
 
-const app = express() // server start
+const app = express() // server create
 
 app.use(express.json())  // middleware
 
