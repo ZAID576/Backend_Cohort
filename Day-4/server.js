@@ -1,3 +1,6 @@
+// server ko start kerna 
+// server ko database se connect kerna
+
 const app = require("./src/app")
 
 app.listen(3000, ()=>{
